@@ -1,0 +1,117 @@
+.grid-item {
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.item-accent {
+	height: 40px;
+	overflow: hidden;
+	position: relative;
+}
+
+.accent-icon {
+	position: absolute;
+	top: -10px;
+	right: 20px;
+}
+
+.grid-item:hover .item-accent .accent-icon {
+	transform: scale(150%);
+	transition: transform 0.2s linear;
+}
+
+.item-box {
+	background-color: hsl(235, 46%, 20%);
+	border-radius: 9px;
+	flex-grow: 1;
+	padding: 1.5em;
+}
+
+.item-box:hover {
+	transition: background-color 0.2s linear;
+	background-color: hsl(245, 46%, 28%);
+}
+
+.item-details {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+	align-items: center;
+}
+
+.item-time {
+	font-size: 3em;
+	font-weight: 300;
+}
+
+.item-last {
+	font-size: 0.9em;
+	color: hsl(235, 45%, 61%);
+}
+
+.item-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.work {
+	background-color: hsl(15, 100%, 70%);
+}
+
+.play {
+	background-color: hsl(195, 74%, 62%);
+}
+
+.study {
+	background-color: hsl(348, 100%, 68%);
+}
+
+.exercise {
+	background-color: hsl(145, 58%, 55%);
+}
+
+.social {
+	background-color: hsl(264, 64%, 52%);
+}
+
+.selfcare {
+	background-color: hsl(43, 84%, 65%);
+}
+
+.ellipsis {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	align-self: stretch;
+}
+
+@media screen and (min-width: 768px) {
+    .item-details {
+		display: block;
+	}
+
+	.item-time {
+		margin-bottom: 10px;
+	}
+
+	.work {
+		grid-row: 1 / span 1;
+		grid-column: 2 / span 1;
+	}
+
+	.play {
+		grid-row: 1 / span 1;
+		grid-column: 3 / span 1;
+	}
+
+	.study {
+		grid-row: 1 / span 1;
+		grid-column: 4 / span 1;
+	}
+	
+	.self-care {
+		background-color: hsl(43, 84%, 65%);
+	}
+}

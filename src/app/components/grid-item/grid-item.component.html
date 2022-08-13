@@ -1,0 +1,17 @@
+<div [class]="'grid-item ' + category ">
+    <div class="item-accent">
+        <img [src]="'assets/img/icon-' + category +'.svg'"class="accent-icon" alt="" />
+    </div>
+    <div class="item-box">
+        <div class="item-header">
+            <span>{{category}}</span>
+            <span class="ellipsis">
+                <img src="assets/img/icon-ellipsis.svg" alt="" />
+            </span>
+        </div>
+        <div class="item-details">
+            <div class="item-time">32hrs</div>
+            <div class="item-last">Last Week - 36 hrs</div>
+        </div>
+    </div>
+</div>

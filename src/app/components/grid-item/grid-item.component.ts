@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-grid-item',
@@ -9,9 +9,17 @@ export class GridItemComponent implements OnInit {
 
   @Input() category: string = '';
 
+  menu: boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
+  
+  }
+
+  openMenu() {
+    this.menu = !this.menu;
+
   }
 
 }

@@ -6,7 +6,13 @@
         <div class="item-header">
             <span>{{category}}</span>
             <span class="ellipsis">
-                <img src="assets/img/icon-ellipsis.svg" alt="" />
+                <img src="assets/img/icon-ellipsis.svg" alt="" (click)="openMenu()"/>
+                <div class="menu" [class.active]="menu" >
+                    <ul class="menu-list">
+                        <li class="menu-item">Editar</li>
+                        <li class="menu-item">Iniciar contador</li>
+                    </ul>
+                </div>
             </span>
         </div>
         <div class="item-details">

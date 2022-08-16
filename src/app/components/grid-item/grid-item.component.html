@@ -1,23 +1,31 @@
-<div [class]="'grid-item ' + category ">
-    <div class="item-accent">
-        <img [src]="'assets/img/icon-' + category +'.svg'"class="accent-icon" alt="" />
-    </div>
-    <div class="item-box">
-        <div class="item-header">
-            <span>{{category}}</span>
-            <span class="ellipsis">
-                <img src="assets/img/icon-ellipsis.svg" alt="" (click)="openMenu()"/>
-                <div class="menu" [class.active]="menu" >
-                    <ul class="menu-list">
-                        <li class="menu-item">Editar</li>
-                        <li class="menu-item">Iniciar contador</li>
-                    </ul>
-                </div>
-            </span>
+<div [class]="'grid-item ' + category">
+  <div class="item-accent">
+    <img
+      [src]="'assets/img/icon-' + category + '.svg'"
+      class="accent-icon"
+      alt=""
+    />
+  </div>
+  <div class="item-box">
+    <div class="item-header">
+      <span>{{ category }}</span>
+      <div class="ellipsis">
+        <button class="btn-menu" (click)="openMenu()" #toggleButton>
+          <!-- <img src="assets/img/icon-ellipsis.svg" alt="" /> -->
+          <i class="fa-solid fa-ellipsis"></i>
+        </button>
+        <div class="menu rounded" [class.active]="isMenuOpen" #menu>
+          <ul class="menu-list">
+            <li class="menu-item">Start timer</li>
+            <li class="menu-item">Edit</li>
+            <li class="menu-item">Delete</li>
+          </ul>
         </div>
-        <div class="item-details">
-            <div class="item-time">32hrs</div>
-            <div class="item-last">Last Week - 36 hrs</div>
-        </div>
+      </div>
     </div>
+    <div class="item-details">
+      <div class="item-time">32hrs</div>
+      <div class="item-last">Last Week - 36 hrs</div>
+    </div>
+  </div>
 </div>

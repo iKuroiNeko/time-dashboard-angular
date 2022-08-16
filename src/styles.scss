@@ -1,57 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 
 .attribution {
-	font-size: 11px;
-	text-align: center;
-	margin-top: 60px;
+  font-size: 11px;
+  text-align: center;
+  margin-top: 60px;
 }
 .attribution a {
-	color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	margin: 0;
-	background-color: hsl(226, 43%, 10%);
-	color: #fff;
-	font-family: 'Rubik', sans-serif;
+  margin: 0;
+  background-color: hsl(226, 43%, 10%);
+  color: #fff;
+  font-family: "Rubik", sans-serif;
 }
 
 ul {
-	list-style: none;
+  list-style: none;
+  padding-left: 0;
 }
 
 .rounded {
-	border-radius: 10px;
+  border-radius: 10px;
 }
 
 .menu {
-	display:none;
-	position:absolute;
-	top:1em;
-	left:0;
-	background:hsl(228, 45%, 44%);
-	color: #FFF;
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 1em;
+  left: 0;
+  background: hsl(235, 46%, 20%);
+  color: #fff;
+  padding: 5px 0;
+  min-width: max-content;
+  box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.02),
+    0px 0px 5.3px rgba(0, 0, 0, 0.028), 0px 0px 10px rgba(0, 0, 0, 0.035),
+    0px 0px 17.9px rgba(0, 0, 0, 0.042), 0px 0px 33.4px rgba(0, 0, 0, 0.05),
+    0px 0px 80px rgba(0, 0, 0, 0.12);
 
-	 &.active {
-		display: block;
-	}
+  &.active {
+    display: block;
+  }
+
+  .menu-item {
+    padding: 10px 15px;
+    transition: background-color 0.2s linear;
+    font-size: 0.9em;
+
+    &:hover {
+      background-color: rgba(256, 256, 256, 0.05);
+    }
+  }
 }
 
-
-
 @media screen and (min-width: 768px) {
-	body {
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+  body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
